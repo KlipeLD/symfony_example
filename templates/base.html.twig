@@ -7,6 +7,8 @@
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
+            <link href="bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
+            <link href="css/app.css" rel="stylesheet">
         {% endblock %}
 
         {% block javascripts %}
@@ -14,6 +16,32 @@
         {% endblock %}
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbarMenuMain">
+            <div class="container-fluid">
+                <button class="navbar-toggler ms-auto boxShadNone" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbarTogIcon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link menuLink" aria-current="page" href="{{ path('app_homepage') }}">
+                                <span>
+                                    Blog
+                                </span>
+                            </a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link menuLink" aria-current="page" href="{{ path('admin') }}">
+                                <span>
+                                    Edycja blogu
+                                </span>
+                            </a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
         {% block body %}{% endblock %}
+        <script src="{{ asset('/bootstrap-5.0.2/js/bootstrap.bundle.min.js') }}" ></script>
     </body>
 </html>

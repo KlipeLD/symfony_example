@@ -1,0 +1,13 @@
+/* Blog */
+.divBlog {
+    border-bottom: 1px solid grey; 
+    background-color: #80808030; 
+    border-radius: 15px 15px 15px 15px 
+}
+.spanTimeBlog {
+    color: grey;
+}
+.imageBlog {
+    max-width: 100%; 
+    max-height: 300px
+}
